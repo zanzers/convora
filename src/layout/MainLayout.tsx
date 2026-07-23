@@ -1,26 +1,19 @@
-import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { Outlet } from "react-router-dom";
 
+export default function MainLayout() {
+  return (
 
-export default function MainLayout(){
+      <div className="flex min-h-screen flex-col bg-slate-100 text-white">
+        <Navbar />
 
-    return(
+        <main className="mx-auto w-full max-w-7xl flex-1 px-6 py-10">
+          <Outlet />
+        </main>
 
-        <div className="min-h-screen flex flex-col bg-slate-50">
-
-            <Navbar />
-
-            <main className="mx-auto w-full max-w-7xl flex-1 px-6 py-8">
-                <Outlet />
-            </main>
-
-
-            <Footer />
-        
-        
-        
-        
-        </div>
-    )
+        <Footer />
+      </div>
+   
+  );
 }

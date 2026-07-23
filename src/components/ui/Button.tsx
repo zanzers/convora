@@ -6,7 +6,10 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
 function Button({className="", children, ...props}: ButtonProps) {
   return (
-    <button className={`rounded-lg bg-blue-600 px-4 py-2 font-medium text-white transition hover:bg-blue-700 ${className}`}{...props}>
+    <button className={`
+   bg-red-500 px-10 py-5 text-white rounded-xl text-xl font-bold cursor-pointer
+
+    ${className}`}{...props}>
         {children}
     </button>
   

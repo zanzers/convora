@@ -15,8 +15,8 @@ export default function AppRoutes() {
     <Routes>
 
       <Route element={<MainLayout />}>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/dashboard" element={<DashboardPage />} />
+      {/* <Route path="/" element={<LandingPage />} /> */}
+      <Route path="/" element={<DashboardPage />} />
       <Route path="/conversation" element={<ConversationPage />} />
       <Route path="/progress" element={<ProgressPage />} />
       <Route path="/profile" element={<ProfilePage />} />
