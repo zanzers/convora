@@ -1,75 +1,25 @@
-# React + TypeScript + Vite
+# Convora Development Log
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Day 1 
 
-Currently, two official plugins are available:
+ - Date: July 23, 2026
+ - Start Time: 2:21 PM
+ - Duration: 8 Hours (including breaks)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ 🎯 Today's Goal
+  Build the project foundation so future development is fast, organized, and scalable.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# ⏰ Suggested Schedule
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+  | Time         | Task                                 |
+| ------------ | ------------------------------------ |
+| 2:21 – 3:00  | Project configuration                |
+| 3:00 – 4:00  | Folder structure & architecture      |
+| 4:00 – 4:15  | ☕ Break                             |
+| 4:15 – 5:45  | Routing & layouts                    |
+| 5:45 – 6:30  | Tailwind & global theme              |
+| 6:30 – 7:00  | 🍽️ Dinner / Rest                    |
+| 7:00 – 8:30  | Placeholder pages & navigation       |
+| 8:30 – 9:30  | Git commit, cleanup, planning Day 2  |
+| 9:30 – 10:21 | Testing, documentation, final commit |
