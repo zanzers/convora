@@ -15,7 +15,7 @@ function Navbar() {
             </Link>
 
 
-            <nav className="flex gap-6 px-10">
+            <nav className="flex gap-6 px-10  text-black">
                 <Link to="/">Home</Link >
                 <Link to="/features">Features</Link >
                 <Link to="/pricing">Pricing</Link >

@@ -2,8 +2,14 @@ import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 
 import { TEXTSTRING } from "@/constant/textString";
+import { useNavigate } from "react-router-dom";
+
+const navigate  = useNavigate;
+
 
 function WelcomeCard() {
+
+  const nav = navigate();
   return (
     
     <Card>
@@ -19,7 +25,7 @@ function WelcomeCard() {
           </p>
         </div>
 
-        <Button>
+        <Button onClick={() => nav("/practice")}>
            {TEXTSTRING.dashboard.startConversation}
         </Button>
 

@@ -133,3 +133,31 @@ If a feature does not help users speak English more confidently, it should not b
 | 7:00 – 8:30  | Placeholder pages & navigation       |
 | 8:30 – 9:30  | Git commit, cleanup, planning Day 2  |
 | 9:30 – 10:21 | Testing, documentation, final commit |
+
+
+
+
+# Day 2
+
+ - Date: July 24, 2026
+ - Start Time: 10:30 AM
+ - Duration: 8 Hours (including breaks)
+
+ 🎯 Today's Goal
+  Build the project foundation so future development is fast, organized, and scalable.
+
+
+# ⏰ Suggested Schedule
+
+| Time              | Task                                                |
+| ----------------- | --------------------------------------------------- |
+| 10:30 – 11:00 | Review yesterday's work & plan today's architecture |
+| 11:00 – 12:30 | Design Conversation UI & Layout                     |
+| 12:30 – 12:45 | ☕ Break                                             |
+| 12:45 – 2:15  | Build AI Coach Screen                               |
+| 2:15 – 3:00   | Lunch / Rest                                        |
+| 3:00 – 4:30   | Conversation Flow (Mock Engine)                     |
+| 4:30 – 4:45   | ☕ Break                                             |
+| 4:45 – 6:00   | Feedback Panel & Session State                      |
+| 6:00 – 7:00   | Testing, Cleanup & Refactoring                      |
+| 7:00 – 7:30   | Git Commit, Documentation & Plan Day 3              |
