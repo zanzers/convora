@@ -2,12 +2,13 @@ import { useState } from "react";
 import { FileText, MessagesSquare, Settings } from "lucide-react";
 
 import { coach } from "@/mock/coach";
-import inputController from "./conversationUtils/conversationUtils";
+import InputController from "./conversationUtils/conversationUtils";
 
 function CoachStage() {
 
   const [mode, setMode] = useState<"menu" | "chat" | "voice">("menu");
   const [message, setMessage] = useState("");
+
 
   return (
     <section className="relative flex h-[calc(100vh-80px)] overflow-hidden rounded-3xl bg-slate-900">
@@ -54,7 +55,7 @@ function CoachStage() {
 
 
       {/* Bottom Floating Controls */}
-      {inputController(mode, setMode, setMessage, message)}
+      <InputController mode={mode} setMode={setMode} setMessage={setMessage} message={message} />
 
     </section>
   );
