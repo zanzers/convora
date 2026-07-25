@@ -1,9 +1,9 @@
 import Card from "@/components/ui/Card";
-import type { Scenario } from "@/mock/scenario"
+import type { ScenarioModel } from "@/mock/scenarioModel";
 
 
 interface ScenarioProps {
-    scenario: Scenario;
+    scenario: ScenarioModel;
     onClick?: (id:string) => void;
 }
 

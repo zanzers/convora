@@ -2,6 +2,7 @@ import { useConversation } from "@/hooks/useConversation";
 import { MessageCircle, Mic, Send, X } from "lucide-react";
 import { type Dispatch, type SetStateAction } from "react";
 
+
 type CoachMode = "menu" | "chat" | "voice";
 
 interface InputControllerProps {
@@ -9,10 +10,10 @@ interface InputControllerProps {
     setMode: Dispatch<SetStateAction<CoachMode>>;
     setMessage: Dispatch<SetStateAction<string>>;
     message: string;
+    sendMessage: (content: string) => Promise<void>;
 }
 
-export default function InputController({ mode, setMode, setMessage, message }: InputControllerProps) {
-    const { sendMessage } = useConversation();
+export default function InputController({ mode, setMode, setMessage, message, sendMessage }: InputControllerProps) {
 
     return (
     <div className="absolute bottom-8 left-1/2 z-20 w-full max-w-xl -translate-x-1/2 px-6">

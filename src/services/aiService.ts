@@ -1,17 +1,17 @@
-import OpenAI from "openai";
 import type { Message } from "@/types/conversationModel";
-import { OPENAI_API_KEY } from "@/services/config/ai";
-import { Xiianger } from "@/constant/textString";
+import { clientModel } from "./config/clientModel";
+import type { ScenarioModel } from "@/mock/scenarioModel";
+import createPrompt from "@/features/prompts/createPrompt";
+import { Xiianger } from "./AI/xiiangerAI";
 
-const client = new OpenAI({
-    apiKey: OPENAI_API_KEY,
-    baseURL: "https://openrouter.ai/api/v1",
-    dangerouslyAllowBrowser: true,
-});
 
-const SYSTEM_PROMPT = Xiianger.prompt;
+const client = clientModel;
 
-export async function setToAI(messages: Message[]): Promise<string> {
+export async function setToAI(messages: Message[], scenario: ScenarioModel): Promise<string> {
+
+
+    const systemPropmt = createPrompt(scenario)
+
     try {
         const response = await client.chat.completions.create({
             model: "inclusionai/ling-3.0-flash:free",
@@ -19,7 +19,7 @@ export async function setToAI(messages: Message[]): Promise<string> {
             messages: [
                 {
                     role: "system",
-                    content: SYSTEM_PROMPT,
+                    content: systemPropmt,
                 },
 
                 ...messages.map((message) => ({

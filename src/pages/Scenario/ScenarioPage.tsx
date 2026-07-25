@@ -1,6 +1,6 @@
 import ScenarioCard from "@/components/conversation/ScenarioCard"
 import { TEXTSTRING } from "@/constant/textString"
-import { scenarios } from "@/mock/scenario"
+import { scenarios } from "@/mock/scenarioModel";
 import { useNavigate } from "react-router-dom";
 
 

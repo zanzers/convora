@@ -4,12 +4,29 @@ import { FileText, MessagesSquare, Settings } from "lucide-react";
 import { coach } from "@/mock/coach";
 import InputController from "./conversationUtils/conversationUtils";
 
+import {useParams } from "react-router-dom";
+import { useConversation } from "@/hooks/useConversation";
+import { scenarios } from "@/mock/scenarioModel";
+
+
+
 function CoachStage() {
+    
+    const { scenarioId } = useParams();
+    const [message, setMessage] = useState("");
+    const [mode, setMode] = useState<"menu" | "chat" | "voice">("menu");
 
-  const [mode, setMode] = useState<"menu" | "chat" | "voice">("menu");
-  const [message, setMessage] = useState("");
+    const scenario = scenarios.find(
+        (s) => s.id === scenarioId
+    )
 
+    if(!scenario){
+        return <div>Scenario not found.</div>
+    }
 
+    const {sendMessage} = useConversation(scenario);
+
+     
   return (
     <section className="relative flex h-[calc(100vh-80px)] overflow-hidden rounded-3xl bg-slate-900">
 
@@ -55,7 +72,7 @@ function CoachStage() {
 
 
       {/* Bottom Floating Controls */}
-      <InputController mode={mode} setMode={setMode} setMessage={setMessage} message={message} />
+      <InputController mode={mode} setMode={setMode} setMessage={setMessage} message={message} sendMessage={sendMessage} />
 
     </section>
   );

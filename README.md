@@ -161,3 +161,35 @@ If a feature does not help users speak English more confidently, it should not b
 | 4:45 – 6:00   | Feedback Panel & Session State                      |
 | 6:00 – 7:00   | Testing, Cleanup & Refactoring                      |
 | 7:00 – 7:30   | Git Commit, Documentation & Plan Day 3              |
+
+
+
+# Day 3
+
+- Date: July 25, 2026
+- Start Time: 8:00 AM
+- Duration: 8 Hours (including breaks)
+
+## 🎯 Today's Goal
+
+Complete the conversation engine, make scenarios dynamic, and prepare the architecture for voice interaction.
+
+---
+
+# ⏰ Suggested Schedule
+
+| Time          | Task                                                          |
+| ------------- | ------------------------------------------------------------- |
+| 8:00 – 8:30   | Review Day 2 progress & plan today's implementation           |
+| 8:30 – 10:00  | Dynamic Scenario Engine (Pass selected scenario to AI)        |
+| 10:00 – 10:15 | ☕ Break                                                      |
+| 10:15 – 12:00 | Conversation History Panel (💬 Chat Drawer)                  |
+| 12:00 – 1:00  | 🍽️ Lunch / Rest                                              |
+| 1:00 – 2:30   | End Practice Flow & Session Management                        |
+| 2:30 – 2:45   | ☕ Break                                                      |
+| 2:45 – 4:15   | Prompt Refactoring (Scenario Prompts & Xiianger Personality)  |
+| 4:15 – 5:30   | Prepare Voice Architecture (Speech Hooks & Audio Structure)   |
+| 5:30 – 6:30   | Testing, Cleanup & Refactoring                                |
+| 6:30 – 7:00   | Git Commit, Documentation & Plan Day 4                        |
+
+---
