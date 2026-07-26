@@ -105,6 +105,36 @@ If a feature does not help users speak English more confidently, it should not b
 
 > **"The best way to build Convora is to become its first daily user."**
 
+# WorkFlow
+
+    🎤 User Speaks
+            │
+            ▼
+    Browser MediaRecorder
+            │
+            ▼
+    Blob
+            │
+            ▼
+    Speech-to-Text AI
+            │
+            ▼
+    Transcript
+            │
+            ▼
+    OpenRouter LLM
+            │
+            ▼
+    Coach Reply
+            │
+            ▼
+    (TTS later)
+            │
+            ▼
+    Coach Speaks Back
+
+
+
 
 
 
@@ -218,3 +248,7 @@ Enable real-time voice conversation between the learner and Xiianger.
 | 2:45 – 4:30     | Automatic Conversation Flow                      |
 | 4:30 – 5:30     | Loading States & Voice Animations                |
 | 5:30 – 6:00     | Testing, Cleanup & Documentation                 |
+
+
+
+
