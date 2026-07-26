@@ -2,19 +2,21 @@ import { useState } from "react";
 import { FileText, MessagesSquare, Settings } from "lucide-react";
 
 import { coach } from "@/mock/coach";
-import InputController from "./conversationUtils/conversationUtils";
+import InputController from "./conversationUtils/InputController";
 
 import {useParams } from "react-router-dom";
 import { useConversation } from "@/hooks/useConversation";
 import { scenarios } from "@/mock/scenarioModel";
+import VoicePreview from "../voiceRecord/voicePreview";
 
 
 
 function CoachStage() {
     
     const { scenarioId } = useParams();
+    const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
     const [message, setMessage] = useState("");
-    const [mode, setMode] = useState<"menu" | "chat" | "voice">("menu");
+    const [mode, setMode] = useState<"menu" | "chat" | "voice" | "preview">("menu");
 
     const scenario = scenarios.find(
         (s) => s.id === scenarioId
@@ -72,7 +74,17 @@ function CoachStage() {
 
 
       {/* Bottom Floating Controls */}
-      <InputController mode={mode} setMode={setMode} setMessage={setMessage} message={message} sendMessage={sendMessage} />
+      {mode !== "preview" && (
+          <InputController
+              mode={mode}
+              setMode={setMode}
+              setMessage={setMessage}
+              message={message}
+              sendMessage={sendMessage}
+              audioBlob={audioBlob}
+              setAudioBlob={setAudioBlob}
+          />
+      )}
 
     </section>
   );

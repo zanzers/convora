@@ -193,3 +193,28 @@ Complete the conversation engine, make scenarios dynamic, and prepare the archit
 | 6:30 – 7:00   | Git Commit, Documentation & Plan Day 4                        |
 
 ---
+
+# Day 4
+
+- Date: July 26, 2026
+- Start Time: 8:00 AM
+- Duration: 8 Hours (including breaks)
+
+🎯 Today's Goal
+
+Enable real-time voice conversation between the learner and Xiianger.
+
+# ⏰ Suggested Schedule
+
+| Time            | Task                                             |
+| ----------------| ------------------------------------------------ |
+| 8:00 – 8:30     | Review Day 3 & plan Voice Architecture           |
+| 8:30 – 10:00    | Browser Speech Recognition (Speech → Text)       |
+| 10:00 – 10:15   | ☕ Break                                          |
+| 10:15 – 12:00   | Connect Speech Recognition to Conversation Hook  |
+| 12:00 – 1:00    | Lunch / Rest                                     |
+| 1:00 – 2:30     | Text-to-Speech (AI → Voice)                      |
+| 2:30 – 2:45     | ☕ Break                                          |
+| 2:45 – 4:30     | Automatic Conversation Flow                      |
+| 4:30 – 5:30     | Loading States & Voice Animations                |
+| 5:30 – 6:00     | Testing, Cleanup & Documentation                 |
