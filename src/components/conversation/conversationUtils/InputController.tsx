@@ -1,4 +1,5 @@
 import VoicePreview from "@/components/voiceRecord/voicePreview";
+import { speechToText } from "@/services/speectText/speechToText";
 import { startRecording, stopRecording } from "@/services/voice/voiceRecorder";
 import { MessageCircle, Mic, Send, X } from "lucide-react";
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
@@ -133,6 +134,10 @@ export default function InputController({ mode, setMode, setMessage, message, se
                     onClick={async () => {
 
                         const blob = await stopRecording();
+
+                        const transcript = await speechToText(blob);
+                        console.log("transcript By: ",transcript);
+
                         setAudioBlob(blob);
                         setRecording(false);                      
                         
