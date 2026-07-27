@@ -4,13 +4,9 @@ export async function textToSpeech(text: string): Promise<void> {
 
         const voices = speechSynthesis.getVoices();
 
-        
-        const voice =
-            voices.find(v => v.name.includes("Google UK English Female")) ??
-            voices.find(v => v.name.includes("Google US English")) ??
-            voices.find(v => v.lang.startsWith("en")) ??
-            voices[0];
+        console.log(voices);
 
+        const voice = voices.find(v => v.name.includes("Zira"));
 
         console.log("Selected:", voice);
 
