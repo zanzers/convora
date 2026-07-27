@@ -1,8 +1,9 @@
 import VoicePreview from "@/components/voiceRecord/voicePreview";
-import { speechToText } from "@/services/speectText/speechToText";
+import { speechToText } from "@/services/speechToText/speechToText";
 import { startRecording, stopRecording } from "@/services/voice/voiceRecorder";
 import { MessageCircle, Mic, Send, X } from "lucide-react";
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
+import { handleVoiceSend } from "./InputUtils";
 
 
 type CoachMode = "menu" | "chat" | "voice" | "preview";
@@ -20,6 +21,7 @@ interface InputControllerProps {
 export default function InputController({ mode, setMode, setMessage, message, sendMessage, audioBlob, setAudioBlob }: InputControllerProps) {
 
     const [isRecording, setRecording] = useState(false);
+    const [isSending, setIsSending] = useState(false);
 
     useEffect(() => {
         console.log("Mode changed:", mode);
@@ -134,13 +136,9 @@ export default function InputController({ mode, setMode, setMessage, message, se
                     onClick={async () => {
 
                         const blob = await stopRecording();
-
-                        const transcript = await speechToText(blob);
-                        console.log("transcript By: ",transcript);
-
                         setAudioBlob(blob);
                         setRecording(false);                      
-                        
+
                     }} 
                     className="rounded-xl bg-red-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-600">
                 Stop
@@ -167,12 +165,12 @@ export default function InputController({ mode, setMode, setMessage, message, se
     )}
 
 
-        
-
         </div>
 
     </div>
     );
+
+
 
 
     
@@ -183,17 +181,25 @@ export default function InputController({ mode, setMode, setMessage, message, se
         return (
 
             <VoicePreview 
+                isSending={isSending}
                 audioBlob={audioBlob}
                 onDelete={() => {
                     setAudioBlob(null);
                     setMode("menu");
                 }}
-                onSend={() =>{
-                    console.log(audioBlob);
-                }}
+                onSend={(blob)  => handleVoiceSend({
+                    blob,
+                    sendMessage,
+                    setAudioBlob,
+                    setMode,
+                    setIsSending,
+                })}
                 />
         );
     }
+
+ 
+
 }
 
 //  setMode("menu");

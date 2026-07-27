@@ -251,4 +251,33 @@ Enable real-time voice conversation between the learner and Xiianger.
 
 
 
+# Day 5
+
+- Date: July 27, 2026
+- Start Time: 8:00 AM
+- Duration: 8 Hours (including breaks)
+
+## 🎯 Today's Goal
+
+Implement the voice recording pipeline and prepare audio transcription for AI conversation.
+
+---
+
+# ⏰ Suggested Schedule
+
+| Time | Task |
+|------|------|
+| 8:00 – 8:30 | Review Day 4 & plan Audio Recording Architecture |
+| 8:30 – 10:00 | Build MediaRecorder (Microphone → Audio Blob) |
+| 10:00 – 10:15 | ☕ Break |
+| 10:15 – 12:00 | Voice Preview (Play, Pause, Delete, Send) |
+| 12:00 – 1:00 | 🍴 Lunch / Rest |
+| 1:00 – 2:30 | Refactor Voice Components & UI |
+| 2:30 – 2:45 | ☕ Break |
+| 2:45 – 4:30 | Create Speech-to-Text Service Architecture |
+| 4:30 – 5:30 | Prepare Audio → Transcript Pipeline |
+| 5:30 – 6:00 | Testing, Cleanup & Documentation |
+
+
+
 

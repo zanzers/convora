@@ -1,18 +1,20 @@
-import { Pause, Play, Send, Trash2 } from "lucide-react";
+import { LoaderCircle, Pause, Play, Send, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 
 interface voicePreviewProps{
+    isSending: boolean;
     audioBlob: Blob;
     onDelete(): void;
-    onSend(): void;
+    onSend(audio: Blob): Promise <void>;
 }
 
-function voicePreview({audioBlob, onDelete, onSend} :voicePreviewProps) {
+function voicePreview({isSending, audioBlob, onDelete, onSend} :voicePreviewProps) {
   
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
+
 
 
     const audioRef= useRef<HTMLAudioElement | null> (null);
@@ -49,6 +51,7 @@ function voicePreview({audioBlob, onDelete, onSend} :voicePreviewProps) {
         };
     }, [audioBlob]);
  
+
     return (
 
         <div className="flex items-center justify-between">
@@ -87,9 +90,10 @@ function voicePreview({audioBlob, onDelete, onSend} :voicePreviewProps) {
                 </button>
 
                 <button
-                    onClick={onSend} 
+                    disabled={isSending}
+                    onClick={() => onSend(audioBlob)} 
                     className="rounded-lg bg-blue-500 px-4 py-2 text-white transition hover:bg-red-700">
-                        <Send size={16}/>
+                        {isSending ? (<LoaderCircle className="animate-spin" size={16}/>): <Send size={16}/>}
                 </button>
 
 

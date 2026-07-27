@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { Message } from "@/types/conversationModel";
 import {setToAI} from "@/services/aiService";
 import type { ScenarioModel } from "@/mock/scenarioModel";
+import { textToSpeech } from "@/services/textToSpeech/textToSpeech";
 
 export function useConversation(scenario: ScenarioModel){
 
@@ -12,9 +13,11 @@ export function useConversation(scenario: ScenarioModel){
             content: scenario.openingMessage,
             createAt: new Date(),
         };
+    
 
         console.log("Xiianger", openingMessage);
         setMessages([openingMessage]);
+        textToSpeech(openingMessage.content);
     }, [scenario]);
 
 
@@ -40,12 +43,15 @@ export function useConversation(scenario: ScenarioModel){
     
             const reply = await setToAI(updatedMessages, scenario);
                 
+            
             const assistantMessages: Message = {
                 id: crypto.randomUUID(),
                 role: "assistant",
                 content: reply,
                 createAt: new Date(),
             }
+
+            await textToSpeech(reply);
     
             setMessages([
                 ...updatedMessages,

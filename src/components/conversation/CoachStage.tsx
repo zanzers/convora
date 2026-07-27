@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FileText, MessagesSquare, Settings } from "lucide-react";
 
 import { coach } from "@/mock/coach";
-import InputController from "./conversationUtils/InputController";
+import InputController from "./InputController/InputController";
 
 import {useParams } from "react-router-dom";
 import { useConversation } from "@/hooks/useConversation";
