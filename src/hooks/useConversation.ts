@@ -42,8 +42,8 @@ export function useConversation(scenario: ScenarioModel){
             setMessages(updatedMessages);
     
             const reply = await setToAI(updatedMessages, scenario);
-                
             
+                
             const assistantMessages: Message = {
                 id: crypto.randomUUID(),
                 role: "assistant",
@@ -51,12 +51,16 @@ export function useConversation(scenario: ScenarioModel){
                 createAt: new Date(),
             }
 
-            await textToSpeech(reply);
+            
     
             setMessages([
                 ...updatedMessages,
                 assistantMessages
             ]);
+
+            console.log("🔊 About to speak:", reply);
+            await textToSpeech(reply);
+            console.log("Finished Speaking");
 
              console.log([
             ...updatedMessages,

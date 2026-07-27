@@ -281,3 +281,9 @@ Implement the voice recording pipeline and prepare audio transcription for AI co
 
 
 
+
+
+<!-- 
+.\adb.exe devices 
+chrome://inspect/#devices
+-->
