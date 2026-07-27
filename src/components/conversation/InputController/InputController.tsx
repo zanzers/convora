@@ -2,6 +2,7 @@ import VoicePreview from "@/components/voiceRecord/voicePreview";
 import { MessageCircle, Mic, Send, X } from "lucide-react";
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import { handleVoiceSend } from "./InputUtils";
+import { startRecording, stopRecording } from "@/services/voice/voiceRecorder";
 
 
 type CoachMode = "menu" | "chat" | "voice" | "preview";
