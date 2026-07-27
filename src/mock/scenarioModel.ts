@@ -30,7 +30,7 @@ export const scenarios: ScenarioModel[] = [
             "Conduct a realistic general job interview to help the user practice speaking English with confidence.",
 
         openingMessage: 
-            `Good morning. I'm Xiianger, and I'll be conducting your interview today.
+            `Good evening. I'm Amy, and I'll be conducting your interview today.
 
             Let's begin.
 
