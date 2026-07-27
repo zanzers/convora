@@ -5,8 +5,6 @@ import {
   QuicActions,
   RecentSessions,
 } from "@/components/dashboard";
-import Test from "@/components/ui/test";
-
 
 
 
