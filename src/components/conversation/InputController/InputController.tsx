@@ -1,6 +1,4 @@
 import VoicePreview from "@/components/voiceRecord/voicePreview";
-import { speechToText } from "@/services/speechToText/speechToText";
-import { startRecording, stopRecording } from "@/services/voice/voiceRecorder";
 import { MessageCircle, Mic, Send, X } from "lucide-react";
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import { handleVoiceSend } from "./InputUtils";

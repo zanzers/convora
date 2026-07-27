@@ -7,8 +7,6 @@ import InputController from "./InputController/InputController";
 import {useParams } from "react-router-dom";
 import { useConversation } from "@/hooks/useConversation";
 import { scenarios } from "@/mock/scenarioModel";
-import VoicePreview from "../voiceRecord/voicePreview";
-
 
 
 function CoachStage() {
