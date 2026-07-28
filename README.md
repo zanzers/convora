@@ -279,6 +279,47 @@ Implement the voice recording pipeline and prepare audio transcription for AI co
 | 5:30 – 6:00 | Testing, Cleanup & Documentation |
 
 
+# Day 6
+
+- Date: July 28, 2026
+- Start Time: 8:00 AM
+- Duration: 8 Hours (including breaks)
+
+## 🎯 Today's Goal
+
+Implement Convora's native voice system by introducing fixed AI voices, voice selection, and a reusable Text-to-Speech (TTS) architecture that will become the foundation for future conversational speaking practice.
+
+This day focuses on AI speaking, not speech recognition.
+
+---
+
+# 📌 Objectives
+
+- Design Convora Voice System
+- Create reusable TTS Service
+- Add multiple built-in Convora voices
+- Allow users to choose a preferred coach voice
+- Save selected voice locally
+- Connect AI responses to speech playback
+- Prepare architecture for future premium voices
+
+---
+
+# ⏰ Suggested Schedule
+
+| Time | Task |
+|------|------|
+| 8:00 – 8:30 | Review Day 5 & Design Convora Voice Architecture |
+| 8:30 – 10:00 | Build Text-to-Speech Service (SpeechSynthesis API) |
+| 10:00 – 10:15 | ☕ Break |
+| 10:15 – 12:00 | Implement Built-in Convora Voices & Voice Manager |
+| 12:00 – 1:00 | 🍴 Lunch / Rest |
+| 1:00 – 2:30 | Build Voice Selection Modal & Settings Screen |
+| 2:30 – 2:45 | ☕ Break |
+| 2:45 – 4:30 | Connect AI Responses → Automatic Voice Playback |
+| 4:30 – 5:30 | Save User Voice Preference & Playback Controls |
+| 5:30 – 6:00 | Testing, Cleanup & Documentation |
+
 
 
 
@@ -287,3 +328,49 @@ Implement the voice recording pipeline and prepare audio transcription for AI co
 .\adb.exe devices 
 chrome://inspect/#devices
 -->
+
+
+<!-- POSTPONE -->
+
+PS E:\workspace\convora> npx vercel dev
+Vercel CLI 58.0.0 (Node.js 24.18.0)
+> Running Dev Command “vite --port $PORT”
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+
+  VITE v8.1.5  ready in 973 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+> Ready! Available at http://localhost:3000
+E:\workspace\convora\api\elevenLabs.ts:6
+    const text = await req.json();
+                           ^
+
+TypeError: req.json is not a function
+    at handler (E:\workspace\convora\api\elevenLabs.ts:6:28)
+    at Server.serverFound (C:\Users\nowel\AppData\Local\npm-cache\_npx\69f9afb961c37556\node_modules\@vercel\node\dist\dev-server.mjs:1175:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.18.0
+E:\workspace\convora\api\elevenLabs.ts:6
+    const text = await req.json();
+                           ^
+
+TypeError: req.json is not a function
+    at handler (E:\workspace\convora\api\elevenLabs.ts:6:28)
+    at Server.serverFound (C:\Users\nowel\AppData\Local\npm-cache\_npx\69f9afb961c37556\node_modules\@vercel\node\dist\dev-server.mjs:1175:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.18.0
+Error: An unexpected error occurred!
+Error: Command failed: taskkill /pid 17000 /T /F
+ERROR: The process "17000" not found.
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1124:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+PS E:\workspace\convora> 

@@ -16,6 +16,7 @@
     "@tanstack/react-query-devtools": "^5.101.4",
     "axios": "^1.18.1",
     "clsx": "^2.1.1",
+    "elevenlabs": "^1.59.0",
     "lucide-react": "^1.26.0",
     "openai": "^6.49.0",
     "react": "^19.2.7",

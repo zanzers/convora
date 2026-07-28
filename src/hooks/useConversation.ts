@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import type { Message } from "@/types/conversationModel";
 import {setToAI} from "@/services/aiService";
 import type { ScenarioModel } from "@/mock/scenarioModel";
-import { textToSpeech } from "@/services/textToSpeech/textToSpeech";
+import textToSpeech from "@/services/providers/elevenLabs";
 
 export function useConversation(scenario: ScenarioModel){
 
