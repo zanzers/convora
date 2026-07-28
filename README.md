@@ -374,3 +374,9 @@ ERROR: The process "17000" not found.
     at maybeClose (node:internal/child_process:1124:16)
     at ChildProcess._handle.onexit (node:internal/child_process:306:5)
 PS E:\workspace\convora> 
+
+
+
+
+
+https://elevenlabs.io/app/api/voice-lab
