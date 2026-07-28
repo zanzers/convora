@@ -19,6 +19,8 @@ export async function textToSpeech(text: string): Promise<void> {
 
         for(const name of preferredNames) {
             voice = voices.find( v => v.name.includes(name));
+
+            console.log("Available voices: ", voice);
             if(voice) break;
         }
         if(!voice){
